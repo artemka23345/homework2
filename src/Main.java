@@ -46,9 +46,22 @@ public class Main {
         byte grayPain = 4;
         int oneClass = whitePain + grayPain;
         int totalClasses = totalPaint / oneClass;
-        int totalWhitePain = (int) (totalClasses * whitePain);
-        int totalGrayPain = (int) (totalClasses * grayPain);
+        int totalWhitePain = totalClasses * whitePain;
+        int totalGrayPain = totalClasses * grayPain;
         System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhitePain + " банок белой краски и " + totalGrayPain + " банок коричневой краски");
+
+        int banana = 5 * 1 * 80;
+        int milk = 200 / 100 * 105;
+        int iceCream = 2 * 100;
+        int egg = 4 * 1 * 70;
+        int gram = banana + milk + iceCream + egg;
+        double kilograms = (double) (banana + milk + iceCream + egg) / 1000;
+        System.out.println("В граммах: " + gram);
+        System.out.println("В килограммах:" + kilograms);
+
+
+
+
 
 
 
