@@ -57,7 +57,21 @@ public class Main {
         int gram = banana + milk + iceCream + egg;
         double kilograms = (double) (banana + milk + iceCream + egg) / 1000;
         System.out.println("В граммах: " + gram);
-        System.out.println("В килограммах:" + kilograms);
+        System.out.println("В килограммах: " + kilograms);
+
+        int excessWeight = 7;
+        int excessWeightKg = excessWeight * 1000;
+        int hunger = excessWeightKg / 250;
+        int diet = excessWeightKg / 500;
+        double averageResult = (hunger + diet) / 2;
+        System.out.println("Eсли спортсмен будет терять каждый день " +
+                "по 250 грамм, то он похудеет за " + hunger + "дней, " +
+                "если спортсмен будет терять каждый день по 500 грамм," +
+                " то он похудеет за " + diet + " дней, в среднем ему" +
+                " потребуется " + averageResult + " дней");
+
+
+
 
 
 
