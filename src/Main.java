@@ -70,6 +70,34 @@ public class Main {
                 " то он похудеет за " + diet + " дней, в среднем ему" +
                 " потребуется " + averageResult + " дней");
 
+        int masha = 67760;
+        int denis = 83690;
+        int kristina = 76230;
+        byte monthsOfTheYear = 12;
+        int mashaYear = monthsOfTheYear * masha;
+        int denisYear = monthsOfTheYear * denis;
+        int kristinaYear = monthsOfTheYear + kristina;
+
+        double mashaIncrease = masha * 1.1;
+        float denisIncrease = (float) (denis * 1.1);
+        double kristinaIncrease = kristina * 1.1;
+
+        double mashaYearIncrease = monthsOfTheYear * mashaIncrease;
+        double denisYearIncrease = monthsOfTheYear * denisIncrease;
+        double kristinaYearIncrease = monthsOfTheYear + kristinaIncrease;
+
+        System.out.println("Маша теперь получает " + mashaIncrease + " рублей. " +
+                "Годовой доход вырос на " + mashaYearIncrease + " рублей.");
+        System.out.println("Денис теперь получает " + denisIncrease + " рублей. " +
+                "Годовой доход вырос на " + denisYearIncrease + " рублей.");
+        System.out.println("Маша теперь получает " + kristinaIncrease + " рублей. " +
+                "Годовой доход вырос на " + kristinaYearIncrease + " рублей.");
+
+
+
+
+
+
 
 
 
