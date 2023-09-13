@@ -26,8 +26,23 @@ public class Main {
         byte AnnySergeevny = 27;
         byte EkaterinyAndreevny = 30;
         int sheetsOfPaper = 480;
-        double result  = sheetsOfPaper / (LyudmilyPavlovny + AnnySergeevny + EkaterinyAndreevny);
+        double result  = (double) sheetsOfPaper / (LyudmilyPavlovny + AnnySergeevny + EkaterinyAndreevny);
         System.out.println("На каждого ученика рассчитано" + result + "листов бумаги.");
+
+        byte bottles = 16;
+        byte estimatedTime = 2;
+        byte minutesHour = 60;
+        int twentyMinutes = 20 / estimatedTime * bottles;
+        float perDay = (float) (24 * minutesHour) / estimatedTime * bottles;
+        double threeDays = (double) (72 * minutesHour) / (estimatedTime * bottles);
+        double oneMounts = (double) (720 * minutesHour) / estimatedTime * bottles;
+        System.out.println("За 20 минут машина произвела " + twentyMinutes + " штук бутылок.");
+        System.out.println("За сутки минут машина произвела " + perDay + " штук бутылок.");
+        System.out.println("За 3 дня минут машина произвела " + threeDays + " штук бутылок.");
+        System.out.println("За 1 месяц минут машина произвела " + oneMounts + " штук бутылок.");
+
+
+
 
 
 
