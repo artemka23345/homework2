@@ -22,6 +22,18 @@ public class Main {
         gradePointAverage = 2.786f;
         salary = 27.12;
 
+        byte LyudmilyPavlovny = 23;
+        byte AnnySergeevny = 27;
+        byte EkaterinyAndreevny = 30;
+        int sheetsOfPaper = 480;
+        double result  = sheetsOfPaper / (LyudmilyPavlovny + AnnySergeevny + EkaterinyAndreevny);
+        System.out.println("На каждого ученика рассчитано" + result + "листов бумаги.");
+
+
+
+
+
+
 
 
 
