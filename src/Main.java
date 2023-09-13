@@ -27,7 +27,7 @@ public class Main {
         byte EkaterinyAndreevny = 30;
         int sheetsOfPaper = 480;
         double result  = (double) sheetsOfPaper / (LyudmilyPavlovny + AnnySergeevny + EkaterinyAndreevny);
-        System.out.println("На каждого ученика рассчитано" + result + "листов бумаги.");
+        System.out.println("На каждого ученика рассчитано " + result + " листов бумаги.");
 
         byte bottles = 16;
         byte estimatedTime = 2;
@@ -41,19 +41,14 @@ public class Main {
         System.out.println("За 3 дня минут машина произвела " + threeDays + " штук бутылок.");
         System.out.println("За 1 месяц минут машина произвела " + oneMounts + " штук бутылок.");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        byte totalPaint = 120;
+        byte whitePain = 2;
+        byte grayPain = 4;
+        int oneClass = whitePain + grayPain;
+        int totalClasses = totalPaint / oneClass;
+        int totalWhitePain = (int) (totalClasses * whitePain);
+        int totalGrayPain = (int) (totalClasses * grayPain);
+        System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhitePain + " банок белой краски и " + totalGrayPain + " банок коричневой краски");
 
 
 
