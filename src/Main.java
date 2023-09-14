@@ -22,24 +22,26 @@ public class Main {
         gradePointAverage = 2.786f;
         salary = 27.12;
 
-        byte LyudmilyPavlovny = 23;
-        byte AnnySergeevny = 27;
-        byte EkaterinyAndreevny = 30;
+        byte lyudmilyPavlovny = 23;
+        byte annySergeevny = 27;
+        byte ekaterinyAndreevny = 30;
         int sheetsOfPaper = 480;
-        double result  = (double) sheetsOfPaper / (LyudmilyPavlovny + AnnySergeevny + EkaterinyAndreevny);
+        double result  = (double) sheetsOfPaper / (lyudmilyPavlovny + annySergeevny + ekaterinyAndreevny);
         System.out.println("На каждого ученика рассчитано " + result + " листов бумаги.");
 
-        byte bottles = 16;
-        byte estimatedTime = 2;
-        byte minutesHour = 60;
-        int twentyMinutes = 20 / estimatedTime * bottles;
-        float perDay = (float) (24 * minutesHour) / estimatedTime * bottles;
-        double threeDays = (double) (72 * minutesHour) / (estimatedTime * bottles);
-        double oneMounts = (double) (720 * minutesHour) / estimatedTime * bottles;
-        System.out.println("За 20 минут машина произвела " + twentyMinutes + " штук бутылок.");
-        System.out.println("За сутки минут машина произвела " + perDay + " штук бутылок.");
-        System.out.println("За 3 дня минут машина произвела " + threeDays + " штук бутылок.");
-        System.out.println("За 1 месяц минут машина произвела " + oneMounts + " штук бутылок.");
+        byte bottlesPer2Minutes  = 16;
+        int twentyMinutes = 20;
+        int bottlesPerMinutes = bottlesPer2Minutes / 2;
+        double bottlesPer20Minutes = twentyMinutes * bottlesPerMinutes;
+        int bottlesPerHour = (int) (3 * bottlesPer20Minutes);
+        double bottlesPerDay  = 24 * bottlesPerHour;
+        double bottlesPer3Days = 3 * bottlesPerDay;
+        double bottlesPer30Days = 10 * bottlesPer3Days;
+        System.out.println("За 20 минут машина произвела " + bottlesPer20Minutes + " штук бутылок.");
+        System.out.println("За сутки машина произвела " + bottlesPerDay + " штук бутылок.");
+        System.out.println("За 3 дня машина произвела " + bottlesPer3Days + " штук бутылок.");
+        System.out.println("За 1 месяц машина произвела " + bottlesPer30Days + " штук бутылок.");
+
 
         byte totalPaint = 120;
         byte whitePain = 2;
@@ -50,19 +52,29 @@ public class Main {
         int totalGrayPain = totalClasses * grayPain;
         System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhitePain + " банок белой краски и " + totalGrayPain + " банок коричневой краски");
 
-        int banana = 5 * 1 * 80;
-        int milk = 200 / 100 * 105;
-        int iceCream = 2 * 100;
-        int egg = 4 * 1 * 70;
+        int bananaWeight = 80;
+        int weight100GramsMilk = 105;
+        int iceCreamBriquetteGrams = 100;
+        int weightEgg = 70;
+
+        int quantityBanana = 5;
+        int quantityGramsMilk = 200;
+        int quantityIceCream = 2;
+        int quantityEgg = 4;
+
+        int banana = quantityBanana * bananaWeight;
+        int milk = quantityGramsMilk / 100 * weight100GramsMilk;
+        int iceCream = quantityIceCream * iceCreamBriquetteGrams;
+        int egg = quantityEgg * weightEgg;
         int gram = banana + milk + iceCream + egg;
         double kilograms = (double) (banana + milk + iceCream + egg) / 1000;
         System.out.println("В граммах: " + gram);
         System.out.println("В килограммах: " + kilograms);
 
         int excessWeight = 7;
-        int excessWeightKg = excessWeight * 1000;
-        int hunger = excessWeightKg / 250;
-        int diet = excessWeightKg / 500;
+        int excessWeightGrams = excessWeight * 1000;
+        int hunger = excessWeightGrams / 250;
+        int diet = excessWeightGrams / 500;
         double averageResult = (hunger + diet) / 2;
         System.out.println("Eсли спортсмен будет терять каждый день " +
                 "по 250 грамм, то он похудеет за " + hunger + "дней, " +
@@ -73,42 +85,30 @@ public class Main {
         int masha = 67760;
         int denis = 83690;
         int kristina = 76230;
-        byte monthsOfTheYear = 12;
-        int mashaYear = monthsOfTheYear * masha;
-        int denisYear = monthsOfTheYear * denis;
-        int kristinaYear = monthsOfTheYear + kristina;
+        int monthsOfTheYear = 12;
+        double salaryIncrease = 1.1;
+        double mashaYear = monthsOfTheYear * masha;
+        double denisYear = monthsOfTheYear * denis;
+        double kristinaYear = monthsOfTheYear * kristina;
 
-        double mashaIncrease = masha * 1.1;
-        float denisIncrease = (float) (denis * 1.1);
-        double kristinaIncrease = kristina * 1.1;
+        double mashaIncrease = masha * salaryIncrease;
+        float denisIncrease = (float) (denis * salaryIncrease);
+        double kristinaIncrease = kristina * salaryIncrease;
 
         double mashaYearIncrease = monthsOfTheYear * mashaIncrease;
-        double denisYearIncrease = monthsOfTheYear * denisIncrease;
-        double kristinaYearIncrease = monthsOfTheYear + kristinaIncrease;
+        float denisYearIncrease = monthsOfTheYear * denisIncrease;
+        double kristinaYearIncrease = monthsOfTheYear * kristinaIncrease;
+
+        double mashaAnnualDifference = mashaYearIncrease - mashaYear;
+        double denisAnnualDifference = denisYearIncrease - denisYear;
+        double kristinaAnnualDifference = kristinaYearIncrease - kristinaYear;
 
         System.out.println("Маша теперь получает " + mashaIncrease + " рублей. " +
-                "Годовой доход вырос на " + mashaYearIncrease + " рублей.");
+                "Годовой доход вырос на " + mashaAnnualDifference + " рублей.");
         System.out.println("Денис теперь получает " + denisIncrease + " рублей. " +
-                "Годовой доход вырос на " + denisYearIncrease + " рублей.");
+                "Годовой доход вырос на " + denisAnnualDifference + " рублей.");
         System.out.println("Маша теперь получает " + kristinaIncrease + " рублей. " +
-                "Годовой доход вырос на " + kristinaYearIncrease + " рублей.");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                "Годовой доход вырос на " + kristinaAnnualDifference + " рублей.");
 
 
     }
